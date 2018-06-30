@@ -12,11 +12,12 @@ source:
   sha256: {{ sha256hash }}
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - toolchain  # [unix]
+    - {{ compiler('c') }}
+  host:
     - python
     - setuptools
     - cffi >=1.8

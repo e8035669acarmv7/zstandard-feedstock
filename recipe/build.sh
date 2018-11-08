@@ -4,4 +4,4 @@
 if [ $(uname) == Linux ]; then
   export LDSHARED="$CC -shared -pthread"
 fi
-$PYTHON setup.py install --single-version-externally-managed --record=record.txt
+python -m pip install --no-deps --ignore-installed .

@@ -25,6 +25,10 @@ requirements:
     - python
     - cffi >=1.8
 
+test:
+  imports:
+    - zstandard
+
 about:
   home: https://github.com/indygreg/python-zstandard
   license: BSD 3-Clause

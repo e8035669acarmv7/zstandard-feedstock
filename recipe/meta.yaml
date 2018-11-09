@@ -10,6 +10,8 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256hash }}
+  patches:
+    - 0001-Use-compiler-from-environment.patch
 
 build:
   number: 1001
@@ -24,7 +26,6 @@ requirements:
     - cffi >=1.8
   run:
     - python
-    - cffi >=1.8
 
 test:
   imports:

@@ -1,0 +1,25 @@
+From 10ee48df8a38e80232a67a6b39e2d932392016df Mon Sep 17 00:00:00 2001
+From: "Uwe L. Korn" <uwelk@xhochy.com>
+Date: Fri, 9 Nov 2018 17:38:55 +0100
+Subject: [PATCH] Use compiler from environment
+
+---
+ make_cffi.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/make_cffi.py b/make_cffi.py
+index 4e74c68..6496e08 100644
+--- a/make_cffi.py
++++ b/make_cffi.py
+@@ -68,7 +68,7 @@ if hasattr(compiler, 'initialize'):
+ # Distutils doesn't set compiler.preprocessor, so invoke the preprocessor
+ # manually.
+ if compiler.compiler_type == 'unix':
+-    args = list(compiler.executables['compiler'])
++    args = [os.environ["CC"]]
+     args.extend([
+         '-E',
+         '-DZSTD_STATIC_LINKING_ONLY',
+-- 
+2.7.4
+

@@ -1,6 +1,5 @@
 {% set name = "zstandard" %}
-{% set version = "0.10.2" %}
-{% set sha256hash = "86c9dee0fe6d4ea5bf394767929fdf5f924d161d9a6d23adcd58a690c5e160b0" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name }}
@@ -9,12 +8,12 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256hash }}
+  sha256: 58f2e102f4d8b82415aa8db4a18ee3f440c28b7741f1c95951236a08ec1a7d7f
   patches:
     - 0001-Use-compiler-from-environment.patch
 
 build:
-  number: 1001
+  number: 0
 
 requirements:
   build:

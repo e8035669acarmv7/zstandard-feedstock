@@ -1,5 +1,5 @@
 {% set name = "zstandard" %}
-{% set version = "0.11.1" %}
+{% set version = "0.12.0" %}
 
 package:
   name: {{ name }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3c31da5d78a7b07e722e8a3e0b1295bc9b316b7e90a1666659c451a42750ffe4
+  sha256: a110fb3ad1db344fbb563942d314ec5f0f3bdfd6753ec6331dded03ad6c2affb
   patches:
     - 0001-Use-compiler-from-environment.patch
 

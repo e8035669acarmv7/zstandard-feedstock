@@ -33,6 +33,7 @@ test:
 about:
   home: https://github.com/indygreg/python-zstandard
   license: BSD 3-Clause
+  license_file: LICENSE
   summary: "Zstandard bindings for Python"
   description: |
     This project provides Python bindings for interfacing with the

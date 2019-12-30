@@ -14,12 +14,12 @@ index 4e74c68..6496e08 100644
 @@ -68,7 +68,7 @@ if hasattr(compiler, 'initialize'):
  # Distutils doesn't set compiler.preprocessor, so invoke the preprocessor
  # manually.
- if compiler.compiler_type == 'unix':
--    args = list(compiler.executables['compiler'])
+ if compiler.compiler_type == "unix":
+-    args = list(compiler.executables["compiler"])
 +    args = [os.environ["CC"]]
-     args.extend([
-         '-E',
-         '-DZSTD_STATIC_LINKING_ONLY',
+     args.extend(
+         ["-E", "-DZSTD_STATIC_LINKING_ONLY", "-DZDICT_STATIC_LINKING_ONLY",]
+    )
 -- 
 2.7.4
 

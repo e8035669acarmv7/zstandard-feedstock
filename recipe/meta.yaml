@@ -6,7 +6,6 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 9052398da52e8702cf9929999c8986b0f68b18c793e309cd8dff5cb7863d7652
   patches:
@@ -32,7 +31,7 @@ test:
 
 about:
   home: https://github.com/indygreg/python-zstandard
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE
   summary: Zstandard bindings for Python
   description: |

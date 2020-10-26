@@ -12,7 +12,7 @@ source:
     - 0001-Use-compiler-from-environment.patch
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -24,6 +24,7 @@ requirements:
     - cffi >=1.8
   run:
     - python
+    - cffi >=1.8
 
 test:
   imports:

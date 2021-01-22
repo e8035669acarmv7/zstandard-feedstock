@@ -1,4 +1,4 @@
-import zstd
+import zstandard as zstd
 
 data = b'foo'
 

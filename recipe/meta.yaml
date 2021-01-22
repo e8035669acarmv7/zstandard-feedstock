@@ -1,5 +1,5 @@
 {% set name = "zstandard" %}
-{% set version = "0.14.1" %}
+{% set version = "0.15.1" %}
 
 package:
   name: {{ name }}
@@ -7,9 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5dd700e52ec28c64d43f681ccde76b6436c8f89a332d6c9e22a6b629f28daeb5
-  patches:
-    - 0001-Use-compiler-from-environment.patch
+  sha256: cb7c6a6f7d62350b9f5539045da54422975630e34dd9069584cc776b9917115f
 
 build:
   number: 0
@@ -20,7 +18,6 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cffi                                   # [build_platform != target_platform]
     - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
   host:
     - python
     - pip

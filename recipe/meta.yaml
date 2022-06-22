@@ -1,5 +1,5 @@
 {% set name = "zstandard" %}
-{% set version = "0.17.0" %}
+{% set version = "0.18.0" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fa9194cb91441df7242aa3ddc4cb184be38876cb10dd973674887f334bafbfb6
+  sha256: 0ac0357a0d985b4ff31a854744040d7b5754385d1f98f7145c30e02c6865cb6f
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:

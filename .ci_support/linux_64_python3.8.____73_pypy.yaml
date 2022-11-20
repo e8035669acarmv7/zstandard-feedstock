@@ -18,3 +18,5 @@ python:
 - 3.8.* *_73_pypy
 target_platform:
 - linux-64
+zstd:
+- '1.5'

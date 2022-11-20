@@ -10,21 +10,24 @@ source:
   sha256: 31d12fcd942dd8dbf52ca5f6b1bbe287f44e5d551a081a983ff3ea2082867863
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cffi                                   # [build_platform != target_platform]
+    - zstd                                   # [build_platform != target_platform]
     - {{ compiler('c') }}
   host:
     - python
     - pip
-    - cffi >=1.8
+    - cffi >=1.11
+    - zstd
   run:
     - python
-    - cffi >=1.8
+    - cffi >=1.11
+    - zstd
 
 test:
   requires:

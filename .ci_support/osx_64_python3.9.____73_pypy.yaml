@@ -18,3 +18,5 @@ python:
 - 3.9.* *_73_pypy
 target_platform:
 - osx-64
+zstd:
+- '1.5'

@@ -7,7 +7,6 @@ Subject: [PATCH] global: reflect upgrade to zstd 1.5.6
  Cargo.lock                      | 10 ++++------
  Cargo.toml                      |  4 ++--
  c-ext/backend_c.c               |  2 +-
- docs/news.rst                   |  1 +
  tests/test_module_attributes.py |  2 +-
  5 files changed, 9 insertions(+), 10 deletions(-)
 
@@ -72,18 +71,6 @@ index bf61f9c8..aabe30bc 100644
      if (ZSTD_VERSION_NUMBER != our_hardcoded_version ||
          zstd_ver_no != our_hardcoded_version) {
          PyErr_Format(
-diff --git a/docs/news.rst b/docs/news.rst
-index cdd6a115..afd7e931 100644
---- a/docs/news.rst
-+++ b/docs/news.rst
-@@ -51,6 +51,7 @@ Other Actions Not Blocking Release
- Changes
- -------
- 
-+* Bundled zstd library upgraded from 1.5.5 to 1.5.6.
- * PyO3 Rust crate upgraded from 0.18 to 0.21.
- * Semi official support for CPython 3.13. Binary wheels for 3.13 are now published
-   during releases. There were no meaningful code changes to support Python 3.12.
 diff --git a/tests/test_module_attributes.py b/tests/test_module_attributes.py
 index 79d915fb..11df0cb3 100644
 --- a/tests/test_module_attributes.py

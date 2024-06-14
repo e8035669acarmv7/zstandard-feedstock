@@ -20,6 +20,7 @@ requirements:
     - cffi                                   # [build_platform != target_platform]
     - zstd {{ zstd_version }}                # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
